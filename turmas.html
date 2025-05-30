@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turmas | Sistema Escolar</title>
+  <link rel="stylesheet" href="css/turmas.css">
+</head>
+<body>
+  <nav class="menu-topo">
+    <a href="menu.html" class="voltar-menu">← Voltar ao Menu Principal</a>
+    <span class="titulo">Turmas</span>
+  </nav>
+  <main>
+    <div class="card-turma">
+      <div class="area-escura">
+        <svg viewBox="0 0 600 700" class="svg-onda">
+          <path fill="#43A047" d="M0,0 Q60,180 0,350 Q60,520 0,700 L600,700 L600,0 Z"/>
+        </svg>
+        <div class="logo-turma">
+          <span>📚</span>
+        </div>
+        <div class="infos-turma">
+          <h1>Turmas</h1>
+          <p>Gerencie as turmas, professores responsáveis e matérias de forma simples e eficiente.</p>
+        </div>
+      </div>
+      <div class="area-conteudo">
+        <section class="area-forms">
+          <div class="form-box" id="cadastro-turma">
+            <h2>Cadastro de Turma</h2>
+            <form id="turma-form">
+              <label>Matéria:<br><input type="text" name="materia" required></label><br>
+              <label>Descrição:<br><input type="text" name="descricao"></label><br>
+              <label>Professor ID:<br><input type="number" name="professor_id"></label><br>
+              <label>Ativo:<br>
+                <select name="ativo">
+                  <option value="true">Sim</option>
+                  <option value="false">Não</option>
+                </select>
+              </label><br>
+              <button type="submit">Cadastrar</button>
+            </form>
+          </div>
+          <div class="form-box" id="editar-turma">
+            <h2>Editar Turma</h2>
+            <form id="editar-form-turma">
+              <input type="hidden" name="turma_id" id="editar-id">
+              <label>Matéria:<br><input type="text" name="materia" id="editar-materia" required></label><br>
+              <label>Descrição:<br><input type="text" name="descricao" id="editar-descricao"></label><br>
+              <label>Professor ID:<br><input type="number" name="professor_id" id="editar-professor_id"></label><br>
+              <label>Ativo:<br>
+                <select name="ativo" id="editar-ativo">
+                  <option value="true">Sim</option>
+                  <option value="false">Não</option>
+                </select>
+              </label><br>
+              <button type="submit">Atualizar</button>
+            </form>
+          </div>
+        </section>
+        <section class="listar-turmas">
+          <h2>Lista de Turmas</h2>
+          <button id="listar-turmas" type="button">Listar Turmas</button>
+          <div id="turmas-lista"></div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <script src="javascript/turmas.js"></script>
+</body>
+</html>
+
+

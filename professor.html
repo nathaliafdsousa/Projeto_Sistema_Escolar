@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professores | Sistema Escolar</title>
+  <link rel="stylesheet" href="css/professor.css">
+</head>
+<body>
+  <nav class="menu-topo">
+    <a href="menu.html" class="voltar-menu">← Voltar ao Menu Principal</a>
+    <span class="titulo">Professores</span>
+  </nav>
+  <main>
+    <div class="card-professor">
+      <div class="area-escura">
+        <svg viewBox="0 0 600 700" class="svg-onda">
+          <path fill="#29B6F6" d="M0,0 Q60,180 0,350 Q60,520 0,700 L600,700 L600,0 Z"/>
+        </svg>
+        <div class="logo-professor">
+          <span>👩‍🏫</span>
+        </div>
+        <div class="infos-professor">
+          <h1>Professores</h1>
+          <p>Gerencie informações dos educadores, matérias lecionadas e dados pedagógicos de forma eficiente.</p>
+        </div>
+      </div>
+      <div class="area-conteudo">
+        <section class="area-forms">
+          <div class="form-box" id="cadastro-professor">
+            <h2>Cadastro de Professor</h2>
+            <form id="professor-form">
+              <label>Nome:<br><input type="text" name="nome" required></label><br>
+              <label>Matéria:<br><input type="text" name="materia" required></label><br>
+              <label>Observação:<br><input type="text" name="observacao"></label><br>
+              <label>Idade:<br><input type="number" name="idade" required></label><br>
+              <button type="submit">Cadastrar</button>
+            </form>
+          </div>
+          <div class="form-box" id="editar-professor">
+            <h2>Editar Professor</h2>
+            <form id="editar-form">
+              <input type="hidden" name="professor_id" id="editar-id">
+              <label>Nome:<br><input type="text" name="nome" id="editar-nome" required></label><br>
+              <label>Matéria:<br><input type="text" name="materia" id="editar-materia" required></label><br>
+              <label>Observação:<br><input type="text" name="observacao" id="editar-observacao"></label><br>
+              <label>Idade:<br><input type="number" name="idade" id="editar-idade" required></label><br>
+              <button type="submit">Atualizar</button>
+            </form>
+          </div>
+        </section>
+        <section class="listar-professores">
+          <h2>Lista de Professores</h2>
+          <button id="listar-professores" type="button">Listar Professores</button>
+          <div id="professores-lista"></div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <script src="javascript/professor.js"></script>
+</body>
+</html>
+
